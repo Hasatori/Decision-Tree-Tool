@@ -1,4 +1,4 @@
-package com.commerzbank.partyservice;
+package com.github.hasatori;
 
 
 import java.util.ArrayList;

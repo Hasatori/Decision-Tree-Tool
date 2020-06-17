@@ -7,7 +7,7 @@
     <groupId>com.github.hasatori</groupId>
     <artifactId>decision-tree</artifactId>
     <version>1.0.2</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <name>decision-tree</name>
     <description>A tool for creating decision trees. It can be used to simplify long sequences of conditions.</description>

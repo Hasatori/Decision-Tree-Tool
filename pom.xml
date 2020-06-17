@@ -12,6 +12,10 @@
     <name>decision-tree</name>
     <description>A tool for creating decision trees. It can be used to simplify long sequences of conditions.</description>
     <url>https://github.com/Hasatori/decision-tree</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <build>
         <plugins>
             <plugin>

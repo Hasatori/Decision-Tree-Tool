@@ -11,7 +11,7 @@
 
     <name>decision-tree</name>
     <description>A tool for creating decision trees. It can be used to simplify long sequences of conditions.</description>
-   
+    <url>https://github.com/Hasatori/decision-tree</url>
     <build>
         <plugins>
             <plugin>
@@ -39,5 +39,11 @@
             <organizationUrl>https://github.com/Hasatori</organizationUrl>
         </developer>
     </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/Hasatori/decision-tree.git</connection>
+        <developerConnection>scm:git:ssh://github.com/Hasatori/decision-tree.git</developerConnection>
+        <url>https://github.com/Hasatori/decision-tree/tree/master</url>
+    </scm>
 
 </project>

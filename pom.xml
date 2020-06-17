@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.hasatori</groupId>
+    <groupId>com.github.Hasatori</groupId>
     <artifactId>decision-tree</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -39,7 +39,7 @@
         <developer>
             <name>Oldřich Hradil</name>
             <email>hradil.o@email.cz</email>
-            <organization>com.github.hasatori</organization>
+            <organization>com.github.Hasatori</organization>
             <organizationUrl>https://github.com/Hasatori</organizationUrl>
         </developer>
     </developers>

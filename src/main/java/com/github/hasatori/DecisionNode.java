@@ -16,14 +16,15 @@ public abstract class DecisionNode {
     private List<List<DecisionNode>> firstMatchingLists = new ArrayList<>();
     private DecisionNode notAssignedNode;
 
-    public DecisionNode(IAction action, IEvaluation evaluation) {
+    public DecisionNode(String name,IEvaluation evaluation,IAction action) {
         this.action = action;
         this.evaluation = evaluation;
         this.children = new ArrayList<>();
+        System.out.println(name);
     }
 
 
-    DecisionNode iFThen(DecisionNode decisionNode) {
+    DecisionNode ifThen(DecisionNode decisionNode) {
         if (wasPreviousIf) {
             this.allMatchingLists.add(notAssignedNode);
         }

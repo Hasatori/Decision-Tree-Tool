@@ -8,11 +8,17 @@ public final class EvaluationLibrary {
 
     public static IEvaluation and(IEvaluation evaluation1, IEvaluation evaluation2, IEvaluation... evaluations) {
         return () -> {
-            boolean gatheredEvaluations = true;
-            for (IEvaluation evaluation : evaluations) {
-                gatheredEvaluations = gatheredEvaluations && evaluation.evaluate();
+            if (!evaluation1.evaluate()) {
+                return false;
+            } else if (!evaluation2.evaluate()) {
+                return false;
             }
-            return evaluation1.evaluate() && evaluation2.evaluate() && gatheredEvaluations;
+            for (IEvaluation evaluation : evaluations) {
+                if (!evaluation.evaluate()) {
+                    return false;
+                }
+            }
+            return true;
         };
     }
 

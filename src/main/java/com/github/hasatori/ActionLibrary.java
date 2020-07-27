@@ -2,10 +2,9 @@ package com.github.hasatori;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.event.Level;
 
 import java.util.Arrays;
-
-import org.slf4j.event.Level;
 
 public final class ActionLibrary {
     private static final Logger log = LoggerFactory.getLogger(ActionLibrary.class);

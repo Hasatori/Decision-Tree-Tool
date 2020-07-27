@@ -109,7 +109,6 @@ By using this library latter havoc can be transformed into something like this:
                         .ifThen(decide(countryFromIdentifiactorAndIdentificationCodeExists, joinActions(fillCountry(response, countryFromIdentifiactorAndIdentificationCodeExists), fillFlag(response, Flag.CODE_BASED))))
                         .elseThen(decide(alwaysTrue(), log(noCountryFoundMessage, Level.ERROR))))
                 .elseThen(decide(alwaysTrue(), log("No conditions fulfilled", Level.ERROR)))
-                .process();
     return response;
     }
 ```

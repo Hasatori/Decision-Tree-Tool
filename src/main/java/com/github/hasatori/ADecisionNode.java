@@ -20,11 +20,11 @@ public abstract class ADecisionNode {
         this.children = new ArrayList<>();
     }
 
-    abstract ADecisionNode ifThen(ADecisionNode decisionNode);
+   public  abstract ADecisionNode ifThen(ADecisionNode decisionNode);
 
-    abstract ADecisionNode elseIfThen(ADecisionNode decisionNode);
+    public  abstract ADecisionNode elseIfThen(ADecisionNode decisionNode);
 
-    abstract ADecisionNode elseThen(ADecisionNode decisionNode);
+    public  abstract ADecisionNode elseThen(ADecisionNode decisionNode);
 
 
     protected abstract void process();

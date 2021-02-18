@@ -9,9 +9,13 @@ public class DecisionNodeFactory {
     private DecisionNodeFactory() {
     }
 
+    public static ADecisionNode processDecisionTree(ADecisionNode decisionNode) {
+        return new RootNode(decisionNode);
+    }
+
     public static ADecisionNode root() {
-        ADecisionNode decoratedNode = new Node(alwaysTrue(), doNothing());
-        return new RootNode(decoratedNode);
+        return new Node(alwaysTrue(),doNothing());
+
     }
 
     public static ADecisionNode decide(IEvaluation evaluation, IAction action) {

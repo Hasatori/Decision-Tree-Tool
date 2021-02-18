@@ -7,10 +7,11 @@ public class RootNode extends ADecisionNode {
     public RootNode(ADecisionNode decoratedDecisionNode) {
         super(decoratedDecisionNode.evaluation, decoratedDecisionNode.action);
         this.decoratedDecisionNode = decoratedDecisionNode;
+        this.process();
     }
 
     @Override
-    ADecisionNode ifThen(ADecisionNode decisionNode) {
+    public  ADecisionNode ifThen(ADecisionNode decisionNode) {
         this.decoratedDecisionNode.ifThen(decisionNode);
         if (decisionNode.evaluation.evaluate()) {
             decisionNode.process();
@@ -22,7 +23,7 @@ public class RootNode extends ADecisionNode {
     }
 
     @Override
-    ADecisionNode elseIfThen(ADecisionNode decisionNode) {
+    public   ADecisionNode elseIfThen(ADecisionNode decisionNode) {
         this.decoratedDecisionNode.elseIfThen(decisionNode);
         if (this.shouldContinueProcessing && decisionNode.evaluation.evaluate()) {
             decisionNode.process();
@@ -32,7 +33,7 @@ public class RootNode extends ADecisionNode {
     }
 
     @Override
-    ADecisionNode elseThen(ADecisionNode decisionNode) {
+    public   ADecisionNode elseThen(ADecisionNode decisionNode) {
         this.decoratedDecisionNode.elseThen(decisionNode);
         if (this.shouldContinueProcessing && decisionNode.evaluation.evaluate()) {
             decisionNode.process();

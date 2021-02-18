@@ -12,7 +12,8 @@ public class Node extends ADecisionNode {
         super(evaluation, action);
     }
 
-    ADecisionNode ifThen(ADecisionNode decisionNode) {
+    @Override
+    public  ADecisionNode ifThen(ADecisionNode decisionNode) {
         if (wasPreviousIf) {
             this.allMatchingLists.add(notAssignedNode);
         }
@@ -24,7 +25,8 @@ public class Node extends ADecisionNode {
         return this;
     }
 
-    ADecisionNode elseIfThen(ADecisionNode decisionNode) {
+    @Override
+    public  ADecisionNode elseIfThen(ADecisionNode decisionNode) {
         if (!wasPreviousIf && !wasPreviousElseIf) {
             throw new IllegalStateException("ElseIfThen has to be after ifThe or elseIfThen");
         }
@@ -38,7 +40,8 @@ public class Node extends ADecisionNode {
         return this;
     }
 
-    ADecisionNode elseThen(ADecisionNode decisionNode) {
+    @Override
+    public ADecisionNode elseThen(ADecisionNode decisionNode) {
         if (!wasPreviousIf && !wasPreviousElseIf) {
             throw new IllegalStateException("ElseThen has to be after ifThen or elseIfThen");
         }

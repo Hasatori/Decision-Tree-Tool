@@ -25,7 +25,10 @@ compile 'com.github.hasatori:decision-tree:${version}'
 'com.github.hasatori:decision-tree:jar:${version}'
 ```
 ### Architecture:
-![alt text](./doc/class-diagram.png)
+
+<p align="center">
+ <img src="./doc/class-diagram.png">
+</p>
 
 ### Examples:
 Imagine you have a very complex set of nested conditions. Something like this:

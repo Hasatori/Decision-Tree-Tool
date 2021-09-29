@@ -1,6 +1,6 @@
 [![Maven Central](https://maven-badges-generator.herokuapp.com/maven-central/com.github.hasatori/decision-tree/badge.svg)](https://maven-badges-generator.herokuapp.com/maven-central/classic/com.github.hasatori/decision-tree)
 # decision-tree
-This tool allows you to create decision tree in order to simplify long sequences of conditions.
+This tool allows you to create a decision tree in order to simplify long sequences of conditions.
 
 ### Maven:
 ```
@@ -28,7 +28,7 @@ compile 'com.github.hasatori:decision-tree:${version}'
 ![alt text](./doc/class-diagram.png)
 
 ### Examples:
-Imagine you have very complex set of nested conditions. Something like this:
+Imagine you have a very complex set of nested conditions. Something like this:
 ```
  Response processRequest(Request request) {
         Response response = new Response();
@@ -80,7 +80,7 @@ Imagine you have very complex set of nested conditions. Something like this:
     }
 
 ```
-As you can see it is very hard to read, a lot of part are kind of similar but no exactly. It is very hard to maintain and read such structure. And this is just a tip of the iceberg of what crazy nested structures might exist in real code.
+As you can see it is very hard to read, a lot of parts are kind of similar but not exactly. It is very hard to maintain and read such a structure. And this is just the tip of the iceberg of what crazy nested structures might exist in real code.
 By using this library latter havoc can be transformed into something like this:
 ```
     Response processRequest(Request request) {
@@ -112,4 +112,4 @@ By using this library latter havoc can be transformed into something like this:
     return response;
     }
 ```
-It is not only easier to read, but it is also more reusable. It can be even better than this. For long evaluation you do not need to use or or and, you can just create your own evaluation properly named, so that it is easy to understand and can be reused.
+It is not only easier to read, but it is also more reusable. It can be even better than this. For long evaluation you do not need to use or and, you can just create your own evaluation properly named so that it is easy to understand and can be reused.
